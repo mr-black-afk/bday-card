@@ -1,0 +1,114 @@
+body {
+    background: url("dot2.png") repeat, linear-gradient(90deg, #ff9a9e, #fad0c4, #a18cd1);
+    background-size: auto, cover;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+/* Existing styles for card and name input remain the same */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 50%;
+    margin: auto;
+    background: linear-gradient(135deg, #ffe0cc, #ff9a9e);
+    box-shadow: 4px 4px 0px #ff9a9e, -4px 4px 0px #ff9a9e, 4px -4px 0px #ff9a9e, -4px -4px 0px #ff9a9e, 8px 8px 0px #a18cd1, -8px 8px 0px #a18cd1, 8px -8px 0px #a18cd1, -8px -8px 0px #a18cd1;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 28px;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.signup {
+    position: relative;
+    width: 242px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.signup input {
+    width: 100%;
+    padding: 16px 10px 8px 10px;
+    border: 2px solid pink;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+}
+
+.signup label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background-color: transparent;
+    padding: 0 4px;
+    color: rgb(218, 16, 16);
+    pointer-events: none;
+    transition: 0.2s ease-out;
+}
+
+.signup input:focus + label,
+.signup input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    color: red;
+    background-color: linear-gradient(135deg, #ffe0cc, #ff9a9e);
+    padding: 0 4px;
+}
+
+.gift-icon {
+    font-size: 60px;
+    background: linear-gradient(45deg, #ff4d6d, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.balloon, .balloon2 {
+    position: absolute;
+    height: auto;
+    width: 157px;
+    animation: float 3.5s ease-in-out infinite;
+}
+
+.balloon {
+    top: 63px;
+    left: 24px;
+}
+
+.balloon2 {
+    top: 154px;
+    right: 24px;
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
